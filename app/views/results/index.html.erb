@@ -9,7 +9,7 @@
   <body>
     <div class="container mt-5">
       <h1 class="mb-4">Results</h1>
-      <%= link_to 'Generate Text', root_path, class: 'btn btn-primary mb-4' %>
+      <%= link_to 'Generate Test', root_path, class: 'btn btn-primary mb-4' %>
       <table class="table">
         <thead>
           <tr>
@@ -24,7 +24,7 @@
             <tr>
               <td><%= result.created_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
               <td><%= result.input_text %></td>
-              <td><%= result.output_text %></td>
+              <td><%= simple_format(result.output_text) %></td>
               <td>
                 <%= button_to 'Delete', result, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
               </td>

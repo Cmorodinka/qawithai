@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OpenAI API Text Generator</title>
+  <title>OpenAI API Test Generator</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
   <div class="container">
-    <h1 class="my-4">OpenAI API Text Generator</h1>
+    <h1 class="my-4">OpenAI API Test Generator</h1>
     <div class="row">
       <div class="col-md-3">
         <div class="list-group">
-          <%= link_to 'Text Generator', text_generator_index_path, class: 'list-group-item list-group-item-action active' %>
+          <%= link_to 'Test Generator', text_generator_index_path, class: 'list-group-item list-group-item-action active' %>
           <%= link_to 'Results', results_path, class: 'list-group-item list-group-item-action' %>
         </div>
       </div>
@@ -20,9 +20,9 @@
         <form id="text-generator-form">
           <div class="form-group">
             <label for="prompt">Enter a prompt:</label>
-            <input type="text" class="form-control" id="prompt" name="prompt" />
+            <textarea class="form-control" id="prompt" name="prompt" style="height: 200px;" autofocus></textarea>
           </div>
-          <button type="submit" id="generate-btn" class="btn btn-primary">Generate Text</button>
+          <button type="submit" id="generate-btn" class="btn btn-primary">Generate Test</button>
           <button type="button" id="clear-btn" class="btn btn-secondary ml-2">Clear Input</button>
         </form>
         <div class="mt-3">
