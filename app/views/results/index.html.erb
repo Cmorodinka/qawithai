@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Results</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' %>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Results</h1>
+      <%= link_to 'Generate Text', root_path, class: 'btn btn-primary mb-4' %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date and Time</th>
+            <th>Input Text</th>
+            <th>Output Text</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @results.each do |result| %>
+            <tr>
+              <td><%= result.created_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
+              <td><%= result.input_text %></td>
+              <td><%= result.output_text %></td>
+              <td>
+                <%= button_to 'Delete', result, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.5.1.slim.min.js', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js' %>
+  </body>
+</html>
