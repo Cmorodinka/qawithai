@@ -18,5 +18,6 @@ class TextGeneratorController < ApplicationController
 
     render json: { generated_text: generated_text, result_id: result.id }
   end
+
 end
 
