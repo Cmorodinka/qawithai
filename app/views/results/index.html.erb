@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Results</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' %>
-  </head>
-  <body>
-    <div class="container mt-5">
-      <h1 class="mb-4">Results</h1>
-      <%= link_to 'Generate Test', root_path, class: 'btn btn-primary mb-4' %>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Date and Time</th>
-            <th>Input Text</th>
-            <th>Output Text</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @results.each do |result| %>
-            <tr>
-              <td><%= result.created_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
-              <td><%= result.input_text %></td>
-              <td><%= simple_format(result.output_text) %></td>
-              <td>
-                <%= button_to 'Delete', result, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+<head>
+  <title>QA with AI by Cmorodinka</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+           <h1 class="my-2"><%= image_tag('cmorodinka.png', alt: 'QA with AI', height: 60) %> QA with AI by Cmorodinka</h1>
+        </div>
+      </div>
     </div>
-    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.5.1.slim.min.js', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js' %>
-  </body>
+  </header>
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-group">
+          <%= link_to 'About', about_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to 'Test Generator', text_generator_index_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to 'Generated Tests', results_path, class: 'list-group-item list-group-item-action active' %>
+          <%= link_to 'Executed Tests', execution_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to 'Passed Tests', passed_executions_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to 'Failed Tests', failed_executions_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to 'FAQ', results_path, class: 'list-group-item list-group-item-action' %>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <h1 class="mb-4">Test Cases</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date and Time</th>
+              <th>Input Text</th>
+              <th>Output Text</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @results.each do |result| %>
+              <tr>
+                <td><%= result.created_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
+                <td><%= result.input_text %></td>
+                <td><%= simple_format(result.output_text) %></td>
+                <td>
+                  <%= button_to 'Delete', result, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="m-0 text-center">&copy; <%= Time.now.year %> Cmorodinka</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <%= javascript_include_tag 'https://code.jquery.com/jquery-3.5.1.slim.min.js', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js' %>
+
+</body>
 </html>
