@@ -7,8 +7,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-  <div class="container">
-    <h1 class="my-4">OpenAI API Test Generator</h1>
+  <header class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="my-2">OpenAI API Test Generator</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container my-4">
     <div class="row">
       <div class="col-md-3">
         <div class="list-group">
@@ -28,11 +36,23 @@
         <div class="mt-3">
           <%= link_to 'Show Results', results_path, class: 'btn btn-info', role: 'button' %>
         </div>
+        <div class="mt-3">
+          <%= link_to 'View Passed Executions', passed_executions_path, class: 'btn btn-info', role: 'button' %>
+         </div>
         <div id="generated-text" class="mt-4"></div>
       </div>
+
     </div>
   </div>
-
+  <footer class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="m-0 text-center">&copy; <%= Time.now.year %> OpenAI</p>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

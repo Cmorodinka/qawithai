@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_13_035450) do
+ActiveRecord::Schema.define(version: 2023_04_17_123447) do
 
   create_table "results", force: :cascade do |t|
     t.text "prompt"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2023_04_13_035450) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "input_text"
     t.string "output_text"
+    t.boolean "passed"
   end
 
 end

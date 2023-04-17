@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenAI API Test Generator</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Text Execution</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Output Text</th>
+      <th>Test Suite</th>
+      <th>Pass?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @results.each do |result| %>
+      <tr>
+        <td><%= result.created_at.strftime("%d/%m/%Y %H:%M:%S") %></td>
+        <td><%= result.output_text %></td>
+        <td><!-- Add test suite here --></td>
+        <td><%= check_box_tag "pass[#{result.id}]" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= submit_tag "Save Results", class: "btn btn-primary" %>
+<div class="mt-3">
+          <%= link_to 'Show Results', results_path, class: 'btn btn-info', role: 'button' %>
+        </div>
+        <div id="generated-text" class="mt-4"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="m-0 text-center">&copy; <%= Time.now.year %> OpenAI</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
