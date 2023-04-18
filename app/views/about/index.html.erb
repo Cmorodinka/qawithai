@@ -20,17 +20,17 @@
     <div class="row">
       <div class="col-md-3">
         <div class="list-group">
-          <%= link_to 'About', about_path, class: 'list-group-item list-group-item-action active' %>
-          <%= link_to 'Test Generator', text_generator_index_path, class: 'list-group-item list-group-item-action' %>
-          <%= link_to 'Generated Tests', results_path, class: 'list-group-item list-group-item-action' %>
-          <%= link_to 'Executed Tests', execution_path, class: 'list-group-item list-group-item-action' %>
-          <%= link_to 'Passed Tests', passed_executions_path, class: 'list-group-item list-group-item-action' %>
-          <%= link_to 'Failed Tests', failed_executions_path, class: 'list-group-item list-group-item-action' %>
-          <%= link_to 'FAQ', results_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to t('navigation.about'), about_path, class: 'list-group-item list-group-item-action active' %>
+          <%= link_to t('navigation.text_generator/index'), text_generator_index_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to t('navigation.results'), results_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to t('navigation.execution'), execution_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to t('navigation.passed_executions'), passed_executions_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to t('navigation.failed_executions'), failed_executions_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to 'FAQ', about_path, class: 'list-group-item list-group-item-action' %>
         </div>
       </div>
       <div class="col-md-9">
-        <h1>About my project</h1> 
+        <h1>About my project</h1>
         <p>My mission is to create an easy-to-use test generator tool for OpenAI API. </p>
         <p>It is test project, but I planned constantly working on improving to provide the best experience possible for my users.</p> 
         <p>I'm highly skilled Software in test developer and passionate about developing tests cutting-edge software.</p>

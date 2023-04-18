@@ -1,0 +1,22 @@
+uk:
+  hello: "Привіт"
+  language_switcher:
+    en: "Англійська"
+    uk: "Українська"
+
+  navigation:
+    about: Про проект
+    text_generator/index: Генератор тестів
+    results: Згенеровані тести
+    execution: Виконані тести
+    passed_executions: Успішні тести
+    failed_executions: Невдалі тести
+  
+
+    generate_button: Згенерувати тест
+    # clear_input_button: Очистити
+
+# site_name: Мій класний сайт
+#   about:
+#     about_my_project: Ласкаво просимо на Мій класний сайт!
+    

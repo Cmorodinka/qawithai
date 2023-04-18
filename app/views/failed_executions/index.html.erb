@@ -20,13 +20,13 @@
       <div class="row">
         <div class="col-md-3">
           <div class="list-group">
-          <%= link_to 'About', about_path, class: 'list-group-item list-group-item-action' %>
-          <%= link_to 'Test Generator', text_generator_index_path, class: 'list-group-item list-group-item-action' %>
-          <%= link_to 'Generated Tests', results_path, class: 'list-group-item list-group-item-action' %>
-          <%= link_to 'Executed Tests', execution_path, class: 'list-group-item list-group-item-action' %>
-          <%= link_to 'Passed Tests', passed_executions_path, class: 'list-group-item list-group-item-action' %>
-          <%= link_to 'Failed Tests', failed_executions_path, class: 'list-group-item list-group-item-action active' %>
-          <%= link_to 'FAQ', results_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to t('navigation.about'), about_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to t('navigation.text_generator/index'), text_generator_index_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to t('navigation.results'), results_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to t('navigation.execution'), execution_path, class: 'list-group-item list-group-item-action'%>
+          <%= link_to t('navigation.passed_executions'), passed_executions_path, class: 'list-group-item list-group-item-action' %>
+          <%= link_to t('navigation.failed_executions'), failed_executions_path, class: 'list-group-item list-group-item-action active' %>
+          <%= link_to 'FAQ', about_path, class: 'list-group-item list-group-item-action' %>      
           </div>
         </div>
         <div class="col-md-9">
