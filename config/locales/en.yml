@@ -30,4 +30,18 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello"
+  language_switcher:
+    en: "English"
+    uk: "Українська"
+
+  navigation:
+    about: About
+    text_generator/index: Test Generator
+    results: Generated Tests
+    execution: Executed Tests
+    passed_executions: Passed Tests
+    failed_executions: Failed Tests
+
+    generate_button: Generate Test
+    # clear_input_button: Clear Input
