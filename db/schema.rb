@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_18_194022) do
+ActiveRecord::Schema.define(version: 2023_04_21_025545) do
+
+  create_table "executions", force: :cascade do |t|
+    t.string "input_text"
+    t.string "output_text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "results", force: :cascade do |t|
     t.text "prompt"
