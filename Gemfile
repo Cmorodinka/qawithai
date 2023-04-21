@@ -34,6 +34,9 @@ gem 'rails-i18n', '~> 6.0'
 
 gem 'bootstrap', '~> 4.6'
 gem 'jquery-rails'
+gem 'rails-erd', group: :development
+
+gem 'rubocop-rails'
 
 
 group :development, :test do
@@ -50,6 +53,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'railroady'
+  gem 'ruby-graphviz'
 end
 
 group :test do

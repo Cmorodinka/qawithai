@@ -1,0 +1,51 @@
+# загальні налаштування
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/{rails,rake}'
+    - !ruby/regexp /old_and_unused\.rb$/
+
+# налаштування правил
+# Загальні кількість строчок коду в проекті
+Layout/LineLength:
+  Max: 120
+
+# Середня кількість строчок коду в класі
+Metrics/ClassLength:
+  Max: 200
+  CountComments: false
+
+# Максимальна кількість строчок коду в одному класі
+Metrics/BlockLength:
+  Max: 300
+
+# Середня кількість строчок коду в одному методі
+Metrics/MethodLength:
+  Max: 30
+
+# Максимальна кількість строчок коду в одному методі
+# Metrics/BlockLength:
+#   Max: 30
+
+# Максимальна глибина дерева наслідування
+# Metrics/Inheritance:
+#   Max: 5
+
+# Середня цикломатична складність методів
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+# Максимальна цикломатична складність методів
+Metrics/BlockNesting:
+  Max: 5
+
+# Відсоток коментарів у коді
+# Metrics/CommentDensity:
+#   Max: 0.5
+
+# # Покриття коду модульними тестами
+# Metrics/CodeCoverage:
+  # Max: 80
+
