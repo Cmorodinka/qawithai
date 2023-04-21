@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_17_203728) do
+ActiveRecord::Schema.define(version: 2023_04_18_194022) do
 
   create_table "results", force: :cascade do |t|
     t.text "prompt"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 2023_04_17_203728) do
     t.boolean "passed"
     t.boolean "failed"
     t.boolean "pass"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "role"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "test_case"
+    t.string "test_cycle"
   end
 
 end

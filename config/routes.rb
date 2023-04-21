@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   # get '/failed', to: 'execution#failed', as: :failed
   get 'failed_executions', to: 'failed_executions#index'
   # get 'execution/failed', to: 'execution#failed', as: 'failed'
+  get 'admin/index'
 end
 
 
