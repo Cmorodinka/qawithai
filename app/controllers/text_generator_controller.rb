@@ -6,7 +6,8 @@ class TextGeneratorController < ApplicationController
     api_key = ENV['OPENAI_API_KEY']
     prompt = params[:prompt]
 
-    openai_api = OpenaiApi.new('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')
+    # change OpenApi.new value to actual
+    openai_api = OpenaiApi.new('****')
     data = openai_api.generate_text(prompt)
 
     #  generated_text = data.dig('choices', 0, 'text').to_s.string
