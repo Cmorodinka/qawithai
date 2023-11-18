@@ -1,9 +1,7 @@
 # README
+Educational Project for defending Thesis for a Bachelor's Degree student of group ZAI-182 of the National University of Odessa Polytechnic
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Some parts of the code are stored in a private repository to prevent the project from being stolen and reproduced
 
 * Ruby version 3.0.0
 * Rails version 6.1.7.3
