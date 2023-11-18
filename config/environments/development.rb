@@ -15,7 +15,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   # this key was deactivated, so you need to generate new one
-  ENV['OPENAI_API_KEY'] = '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'
+  ENV['OPENAI_API_KEY'] = ''
 
 
   # Enable/disable caching. By default caching is disabled.
